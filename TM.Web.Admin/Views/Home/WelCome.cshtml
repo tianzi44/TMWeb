@@ -1,0 +1,53 @@
+﻿<html>
+<head>
+    <title>@ViewBag.Title</title>
+
+    <style type="text/css">
+        ul li {
+        list-style:none;
+        }
+        a{
+            color:brown;
+            font-size:20px;
+        }
+        .head {
+         font-size:50px;
+         color:orangered;
+        }
+
+        div{
+            height:80px;
+            text-align:center;
+            te
+        }
+
+        #headDiv{
+            background-color:darkslategray;
+        }
+        #contextDiv{
+            background-color:blanchedalmond;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="headDiv">
+        <font class="head">天马电商平台接口服务</font>
+    </div>
+    <div id="contextDiv">
+        <ul>
+            <li>
+            @Html.ActionLink("ajax请求Demo", "Ajax", "MyAjax")
+            </li>            
+            <li>
+            <a href="#">swagger接口</a>
+            </li>
+        </ul>
+
+    </div>
+</body>
+</html>
+
+
+
+

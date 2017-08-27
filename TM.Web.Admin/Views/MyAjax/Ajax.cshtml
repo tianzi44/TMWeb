@@ -1,0 +1,38 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Calc</title>
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script>
+        $(function () {
+            $("#btn1").click(function(){
+                $.post(
+                    '@Url.Action("Calc","MyAjax")',
+                    $("#form1").serialize(),
+                    function (data) {
+                        $("#sum").val(data);
+                    })
+            });
+        })
+    </script>
+</head>
+<body>
+    <div> 
+        <form id="form1">
+            <input name="Number1" value="1" />+
+            <input name="Number2" value="2" />=
+            <input id="sum" />
+            <input id="btn1" type="button" value="发送ajax请求" />
+        </form>
+
+        
+    </div>
+</body>
+</html>
